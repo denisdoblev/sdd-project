@@ -1,6 +1,13 @@
 # SDD framework repository
 
-This repository contains reusable Spec-Driven Development templates and Codex Agent Skills. Keep the framework smaller than the development problems it is meant to simplify.
+This repository contains reusable Spec-Driven Development templates and shared agent skills. Keep the framework smaller than the development problems it is meant to simplify.
+
+The SDD is intentionally a shared core with thin host adapters:
+
+- Shared source of truth: `AGENTS.md`, `sdd/`, `docs/`, and `.agents/skills/`.
+- Host-specific adaptation: invocation syntax, agent metadata, and platform-specific configuration only when required.
+- No duplicate framework copies under `.github/skills` or a second Codex/Copilot fork of the workflow.
+- Do not break one host to support another; preserve compatibility while adjusting only the host-specific layer.
 
 ## Context router
 
